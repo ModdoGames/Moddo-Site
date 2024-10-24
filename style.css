@@ -17,3 +17,14 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
+body {
+  width: 100vw;
+  height: 500vh;
+  overflow-x: hidden;
+}
+
+div {
+  width: 500vw;
+  position: fixed;
+}
