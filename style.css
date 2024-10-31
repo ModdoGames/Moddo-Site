@@ -5,12 +5,12 @@
     box-sizing: border-box;
 }
 
-header {
+.header {
   position: sticky;
   background: "#3B3B3B";
 }
 
-footer {
+.footer {
   background: "#3B3B3B";
 }
 
