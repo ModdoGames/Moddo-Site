@@ -4,27 +4,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Header */
+
 header {
   position: sticky;
   background: "#3B3B3B";
 }
 
-/* Footer */
 footer {
   background: "#3B3B3B";
 }
 
-footer:hover {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
-}
 body {
   width: 100vw;
   height: 500vh;
   overflow-x: hidden;
-}
-
-.scroll {
-  width: 500vw;
-  position: fixed;
 }
