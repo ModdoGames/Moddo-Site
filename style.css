@@ -8,14 +8,16 @@
 .header {
   position: sticky;
   background: "#3B3B3B";
+  height: 50px;
 }
 
 .footer {
   background: "#3B3B3B";
+    height: 50px;
 }
 
 body {
   width: 100vw;
-  height: 500vh;
+  /*height: 500vh;*/
   overflow-x: hidden;
 }
