@@ -5,16 +5,17 @@
     box-sizing: border-box;
 }
 
-.header {
+header {
   position: sticky;
   background: "#FF0000";
   font-family: "alatsi";
   height: 50px;
 }
 
-.footer {
+footer {
   background: "#FF0000";
-    height: 50px;
+  height: 50px;
+  font-family: "alatsi";
 }
 
 .coming {
