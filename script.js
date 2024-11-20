@@ -1,17 +1,37 @@
 // Function to handle form submission
 function handleSubmit(event) {
-    event.preventDefault(); // Prevent default form submission behavior
+    event.preventDefault();
+    
     const formData = new FormData(event.target);
     const form = event.target;
+    
+    // Show loading state
+    form.querySelector('button').textContent = 'Sending...';
+    form.querySelector('button').disabled = true;
 
-    // Process form data here
-    console.log('Form submitted:', Object.fromEntries(formData));
-
-    // Clear form fields
-    form.reset();
-
-    // Show success message
-    alert('Thank you for contacting us!');
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'cors'
+    })
+    .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+    })
+    .then(() => {
+        // Form submitted successfully
+        alert('Thank you for contacting us!');
+        form.reset();
+        form.querySelector('button').textContent = 'Send';
+        form.querySelector('button').disabled = false;
+    })
+    .catch(error => {
+        // Handle error
+        console.error('Error:', error);
+        alert('There was an issue sending your message. Please try again.');
+        form.querySelector('button').textContent = 'Send';
+        form.querySelector('button').disabled = false;
+    });
 }
 
 // Add event listener to the contact form
